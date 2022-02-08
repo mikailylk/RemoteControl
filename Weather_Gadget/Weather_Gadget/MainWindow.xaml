@@ -1,0 +1,55 @@
+﻿<Window x:Class="Weather_Gadget.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weather_Gadget"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="100" Width="200"
+        AllowsTransparency="True"
+        Background="Transparent"
+        >
+    <Window.Resources>
+        <Style x:Key="btnClose" TargetType="Button">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Padding" Value="0, 0, 0, 0"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF181E42">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30px"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30px"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnClose" Style="{StaticResource btnClose}"
+                Opacity="1" DockPanel.Dock="Right"
+                Content="X" FontWeight="ExtraBold" Foreground="Red" Click="btnClose_Click"
+                Grid.Column="2">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Color="LightGray" Offset="0"/>
+                        <GradientStop Color="Gray" Offset="1"/>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DockPanel LastChildFill="True">
+            <Label Content="City: " Foreground="White"/>
+            <TextBox x:Name="txtbxCityName" Width="80" Height="20"/>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="1">
+            <TextBlock Text="Found City?" Foreground="White"/>
+        </DockPanel>
+        <Button x:Name="btnTestSearch" Click="btnTestSearch_Click" Grid.Column="1" Margin="5" Content="Search" Foreground="White" />
+
+        <TextBlock x:Name="txtbWeather" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

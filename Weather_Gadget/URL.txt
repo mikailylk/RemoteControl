@@ -1,0 +1,1 @@
+https://api.openweathermap.org/data/2.5/forecast?q={City}&mode=xml&units=metric&appid={APP_ID}
