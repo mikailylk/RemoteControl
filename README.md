@@ -1,3 +1,3 @@
 # yoelek_apps
- public-lookin-repo
+This repo gives you access to see my recently done/on progress projects
 
