@@ -5,6 +5,9 @@
 # "*" ... steht für jede beliebige Zeichenfolge
 # 
 
+#ignore weather-widget folder
+weather-widget/
+
 *.exe
 *.dll
 .vs/
