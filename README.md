@@ -1,3 +1,3 @@
-# yoelek_apps
-This repo gives you access to see my recently done/on progress projects
+# RemoteControl
+This repo accesses serial-port and sends control-cmds to a bluetooth receiver.
 
